@@ -1,0 +1,10 @@
+{
+  "name": "redtube",
+  "version": "1.0.0",
+  "description": "Cloning Youtube with Vanilla and Node",
+  "main": "index.js",
+  "author": "usonkrap",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
