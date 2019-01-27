@@ -3,13 +3,14 @@ import morgan from "morgan";  // for logging
 import helmet from "helmet";  // for secure
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import { userRouter } from "./router";
+import routes from './routes'
+import globalRouter from "./routers/globalRouter";
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
+
+
 
 const app = express();
-
-const handleHome = (req, res) => res.send("Hello my ass");
-const handlePrifile = (req, res) => res.send("Hello profile");
-
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -17,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(helmet());
 
-app.get("/", handleHome);
-app.get("/profile", handlePrifile);
-app.use("/user", userRouter);
+app.use(routes.home, globalRouter);
+app.use(routes.users, userRouter);
+app.use(routes.videos, videoRouter);
 
 export default app;
