@@ -1,4 +1,7 @@
-extends layouts/main.pug
+extend layouts/main.pug
 
 block content
-  p Hello
+    .videos
+        each item in videos
+            h1= item.title
+            p= item.description
