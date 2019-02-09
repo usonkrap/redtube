@@ -1,27 +1,33 @@
 {
-  "name": "redtube",
-  "version": "1.0.0",
-  "description": "Cloning Youtube with Vanilla and Node",
-  "main": "index.js",
-  "author": "usonkrap",
-  "dependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "helmet": "^3.15.0",
-    "mongoose": "^5.4.10",
-    "morgan": "^1.9.1",
-    "multer": "^1.4.1",
-    "pug": "^2.0.3"
-  },
-  "scripts": {
-    "start": "nodemon --exec babel-node init.js"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
-  }
+    "name": "redtube",
+    "version": "1.0.0",
+    "description": "Cloning Youtube with Vanilla and Node",
+    "main": "index.js",
+    "author": "usonkrap",
+    "dependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/node": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "body-parser": "^1.18.3",
+        "cookie-parser": "^1.4.3",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4",
+        "helmet": "^3.15.0",
+        "mongoose": "^5.4.10",
+        "morgan": "^1.9.1",
+        "multer": "^1.4.1",
+        "pug": "^2.0.3"
+    },
+    "scripts": {
+        "start": "nodemon --exec babel-node init.js"
+    },
+    "devDependencies": {
+        "eslint": "^5.13.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-config-prettier": "^4.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "nodemon": "^1.18.9",
+        "prettier": "^1.16.4"
+    }
 }
