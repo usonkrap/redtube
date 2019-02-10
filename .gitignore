@@ -80,6 +80,9 @@ typings/
 .dynamodb/
 
 
+# User
+.vscode
+uploads
+static
 package-lock.json
 note.md
-uploads
