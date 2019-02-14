@@ -7,7 +7,7 @@ export const localsMiddleware = (req, res, next) => {
   res.locals.siteName = 'RedTube';
   res.locals.routes = routes;
   res.locals.user = req.user || null;
-  console.log(req.user);
+  // console.log(req.user);
   next();
 };
 
@@ -17,7 +17,7 @@ export const onlyPublic = (req, res, next) => {
 };
 
 export const onlyPrivate = (req, res, next) => {
-  if (!res.user) res.redirect(routes.home);
+  if (!req.user) res.redirect(routes.home);
   next();
 };
 
