@@ -19,7 +19,7 @@ export const postJoin = async (req, res, next) => {
     // Register User
     console.log(name, email);
     try {
-      const user = await User({
+      const user = await new User({
         //  IMPORTANT: Not User.create()
         name,
         email,
@@ -71,11 +71,25 @@ export const postGithubLogin = (req, res) => {
   res.redirect(routes.home);
 };
 
+export const getMe = (req, res) => {
+  res.render('userDetail', { pageTitle: 'User Detail', user: req.user });
+};
+
 export const logout = (req, res) => {
   req.logout();
   res.redirect(routes.home);
 };
 
-export const userDetail = (req, res) => res.render('userDetail', { pageTitle: 'userDetail' });
-export const editProfile = (req, res) => res.render('editProfile', { pageTitle: 'editProfile' });
-export const changePassword = (req, res) => res.render('changePassword', { pageTitle: 'changePassword' });
+export const userDetail = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+  try {
+    const user = await User.findById(id);
+    res.render('userDetail', { pageTitle: 'User Detail', user });
+  } catch (error) {
+    res.redirect(routes.home);
+  }
+};
+export const editProfile = (req, res) => res.render('editProfile', { pageTitle: 'Edit Profile' });
+export const changePassword = (req, res) => res.render('changePassword', { pageTitle: 'Change Password' });
