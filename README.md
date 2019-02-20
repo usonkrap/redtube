@@ -1,16 +1,14 @@
-# redtube
+# RedTube
 
-Cloning Youtube with Vanilla and Node
+## Build
 
-# Pages
+- #### Frontend
+    Javascript, Sass, Pug
+- #### Backend
+    NodeJS, MongoDB, PassportJS, Prisma
+- #### Tools
+    Webpack, Babel, Heroku, AWS S3
 
--   [x] Home
--   [x] Join
--   [x] Login
--   [x] Search
--   [x] User Detail
--   [x] Edit Profile
--   [x] Change Password
--   [x] Upload
--   [x] Video Detail
--   [x] Edit Video
+-------------
+
+## Note
