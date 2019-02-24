@@ -11,4 +11,14 @@
 
 -------------
 
-## Note
+## Pages
+
+- [x] Home
+- [x] Log In
+- [x] Sign Up
+- [x] Profile
+- [x] Search
+- [x] Update Profile
+- [x] Video Detail
+- [x] Edit Video
+- [x] Upload Video

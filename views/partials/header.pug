@@ -2,22 +2,33 @@ header.header
     .header__wrapper
         .header__column
             a(href=routes.home)
-                i.fab.fa-youtube
+                i.fas.fa-bars
+            a(href=routes.home)
+                i.fab.fa-youtube.logo
+                |RedTube
         .header__column
             form(action=routes.search, method="get")
-                input(type="text", placeholder="Search By term...", name="term")
+                input(type="text", placeholder="Search", name="term")
+                button
+                    i.fas.fa-search
         .header__column
             ul
                 //- req.user
                 if !loggedUser
                     li
-                        a(href=routes.join) Join
+                        a(href=routes.join)
+                            i.fas.fa-user-plus
                     li
-                        a(href=routes.login) Log In
+                        a(href=routes.login)
+                            i.fas.fa-user-check
                 else
+                    li.tooltip
+                        a(href=`/videos${routes.upload}`)
+                            i.fas.fa-video
                     li
-                        a(href=`/videos${routes.upload}`) Upload
+                        a(href=routes.me)
+                            i.fas.fa-user-circle
+
                     li
-                        a(href=routes.me) Profile
-                    li
-                        a(href=routes.logout) Log Out
+                        a(href=routes.logout)
+                            i.fas.fa-sign-out-alt
